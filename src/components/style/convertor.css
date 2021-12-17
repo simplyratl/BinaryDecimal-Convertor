@@ -1,0 +1,95 @@
+.converter-container{
+	width: 70%;
+	height: 100%;
+	background-color: #2D4263;
+	margin: 10em auto;
+	border-radius: 8px;
+	position: relative;
+}
+
+.converter-container .navigation-mac{
+	position: absolute;
+	display: flex;
+}
+
+.converter-container .navigation-mac .dot{
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	margin-left: 5px;
+	margin-top: 4px;
+}
+
+.converter-container .navigation-mac .red{
+	background-color: #f9614d;
+}
+
+.converter-container .navigation-mac .yellow{
+	background-color: #faba09;
+}
+
+.converter-container .navigation-mac .green{
+	background-color: #11c938;
+}
+
+.converter-container form{
+	position: relative;
+	padding: 30px 30px;
+}
+
+.converter-container form .row{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-gap: 20px 30px;
+	margin-bottom: 17px;
+	width: 100%;
+}
+
+.converter-container form label{
+	color: #ECDBBA;
+	font-size: 1.3rem;
+}
+
+.converter-container form input{
+	border: none;
+	outline: none;
+	background: none;
+	border: 1px solid #ECDBBA;
+	color: #ECDBBA;
+	border-radius: 6px;
+	width: 100%;
+	padding: 10px 9px;
+	font-size: 1.3rem;
+}
+
+.converter-container form select{
+	padding: 13px 10px;
+	border-radius: 6px;
+	border: none;
+	outline: none;
+	width: 100%;
+}
+
+.converter-container form .from label{
+	display:flex;
+	width: 100%;
+}
+
+.converter-container form .to label{
+	display:flex;
+	width: 100%;
+}
+
+.converter-container form .fromto{
+	display: grid;
+	grid-template-columns: auto auto;
+}
+
+.converter-container form .result{
+	font-size: 2.2rem;
+	display: flex;
+	justify-content: center;
+	color: #fff;
+}
+
+
