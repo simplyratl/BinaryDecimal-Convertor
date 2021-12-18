@@ -1,10 +1,12 @@
 .converter-container {
     width: 100%;
     max-width: 700px;
-    background-color: #2d4263;
-    margin: 10em auto;
+    background: linear-gradient(180deg, rgba(64,64,255,1) 60%, rgba(51,44,73,1) 100%);
     border-radius: 8px;
     position: relative;
+    margin: 10em auto;
+    color: #fff;
+    box-shadow: 4px 15px 20px #00000030;
 }
 
 @media screen and (max-width: 745px) {
@@ -38,35 +40,10 @@
     background-color: #11c938;
 }
 
-.converter-container .language {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    right: 7px;
-    top: 8px;
-    border: 1px solid white;
-    color: white;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    z-index: 5;
+.converter-container .form-container{
+
 }
 
-.balkan {
-    position: absolute;
-    visibility: hidden;
-    opacity: 0;
-    border: 1px solid #ff523b;
-    color: #000;
-    transition: ease-in-out 0.15s;
-}
-
-.show {
-    opacity: 1;
-    visibility: visible;
-}
 
 .converter-container form {
     position: relative;
@@ -82,7 +59,6 @@
 }
 
 .converter-container form label {
-    color: #ecdbba;
     font-size: 1.3rem;
 }
 
@@ -90,12 +66,12 @@
     position: relative;
     outline: none;
     background: none;
-    border: 1px solid #ecdbba;
-    color: #ecdbba;
+    border: 1px solid #008cff;
     border-radius: 6px;
     width: 100%;
     padding: 10px 17px;
     font-size: 1.3rem;
+    color: #fff;
 }
 
 .converter-container form select {
@@ -132,7 +108,7 @@
 }
 
 .converter-container form .fromto select:hover {
-    border: 1px solid #ff523b;
+    border: 1px solid #008cff;
 }
 
 .converter-container form .result {
@@ -140,7 +116,6 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    color: #fff;
 }
 
 @media screen and (max-width: 450px) {
@@ -150,33 +125,36 @@
 }
 
 .converter-container form .swap {
-    border: 1px solid #ecdbba;
+    border: 1px solid #008cff;
     background: none;
-    color: #ecdbba;
     padding: 10px 40px;
     margin: 10px 0;
     border-radius: 7px;
     transition: ease-in-out 0.15s;
     cursor: pointer;
+    color: #fff;
 }
 
 .converter-container form .swap:hover {
-    border: 1px solid #f9614d;
-    color: #f9614d;
+    border: 1px solid #009cfb;
 }
 
 .converter-container form .convert {
-    background: #f9614d;
+    background: #008cff;
     border: none;
-    color: #ecdbba;
     padding: 10px 40px;
     margin: 10px 0;
     margin-right: 10px;
     border-radius: 7px;
     transition: ease-in-out 0.15s;
+    color: #fff;
     cursor: pointer;
 }
 
 .converter-container form .convert:hover {
-    background: #ff523b;
+    background: #009cfb;
+}
+
+.converter-container form .length{
+    font-size: 1rem;
 }

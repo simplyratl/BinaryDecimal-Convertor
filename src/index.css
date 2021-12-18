@@ -10,7 +10,7 @@ body {
     font-family: 'Poppins', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    height: 100vh;
+    height: 80fvh;
     background-color: #191919;
 }
 

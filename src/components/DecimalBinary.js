@@ -51,13 +51,6 @@ function DecimalBinary() {
         setTypeNumberTo(e.target.selectedOptions[0].value);
     };
 
-    const languageStyle = () => {
-        if (openLanguage) {
-            return 'language balkan show';
-        } else {
-            return 'language balkan';
-        }
-    };
 
     return (
         <div className='converter-container'>
@@ -65,14 +58,6 @@ function DecimalBinary() {
                 <div className='dot red'></div>
                 <div className='dot yellow'></div>
                 <div className='dot green'></div>
-            </div>
-
-            <div className='language'>
-                <p>EN</p>
-            </div>
-
-            <div className={languageStyle()}>
-                <p>BLKN</p>
             </div>
 
             <form onSubmit={handleSubmit} autoComplete='off'>
@@ -123,10 +108,20 @@ function DecimalBinary() {
 
                 <div className='row'>
                     <div className='column'>
+                        {typeNumberFrom === "binary" ? <p className='length'>Length: {decimal.length}</p> : null}
+                    </div>
+                </div>
+
+                <div className='row'>
+                    <div className='column'>
                         <label htmlFor='result'>Result to {typeNumberTo}:</label>
 
                         <div className='result'>
                             <p>{isNaN(result) ? 'Error, probably using unsupported numbers.' : result}</p>
+                        </div>
+
+                        <div className='length-result'>
+                            <p>{typeNumberTo === 'binary' ? `Length: ${result.length}` : null}</p>
                         </div>
                     </div>
                 </div>
