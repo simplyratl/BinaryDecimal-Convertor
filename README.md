@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Link to online site: https://simplyratl.github.io/BinaryDecimal-Convertor/
 
 ## Available Scripts
 
