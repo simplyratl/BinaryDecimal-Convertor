@@ -16,7 +16,6 @@ function DecimalBinary() {
         if ((typeNumberFrom === 'decimal') & (typeNumberTo === 'binary')) {
             let dec = parseInt(e.target[2].value);
             setResult(dec.toString(2));
-            console.log(e);
         } else if ((typeNumberFrom === 'decimal') & (typeNumberTo === 'hexadecimal')) {
             let dec = parseInt(e.target[2].value);
             setResult(dec.toString(16).toUpperCase());
@@ -92,7 +91,13 @@ function DecimalBinary() {
     function everyForthCharacter() {
         let forth = result;
 
-        while (forth.length < 4) forth = '0' + forth;
+        if (forth.length <= 4) {
+            console.log('less than 4');
+            while (forth.length < 4) forth = '0' + forth;
+            return forth;
+        }
+
+        while (forth.length < 8) forth = '0' + forth;
 
         return forth.replace(/\d{4}(?=.)/g, '$& ');
     }
