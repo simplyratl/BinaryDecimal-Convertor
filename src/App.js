@@ -1,12 +1,10 @@
 import './App.css';
-import DecimalBinary from './components/DecimalBinary.js'
-import BinaryToDecimal from './components/BinaryToDecimal.js'
+import Convertor from './components/Convertor';
 
 function App() {
   return (
     <>
-      <DecimalBinary />
-      {/* <BinaryToDecimal /> */}
+      <Convertor />
     </>
   );
 }

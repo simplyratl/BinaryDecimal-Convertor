@@ -1,12 +1,13 @@
 .converter-container {
     width: 100%;
     max-width: 700px;
-    background: linear-gradient(180deg, rgba(64,64,255,1) 60%, rgba(51,44,73,1) 100%);
     border-radius: 8px;
     position: relative;
     margin: 10em auto;
     color: #fff;
-    box-shadow: 4px 15px 20px #00000030;
+    box-shadow: 15px 15px 20px #00000030;
+    background-color: #292929;
+    z-index: 1;
 }
 
 @media screen and (max-width: 745px) {
@@ -26,10 +27,15 @@
     border-radius: 50%;
     margin-left: 7px;
     margin-top: 8px;
+    z-index: 5;
 }
 
 .converter-container .navigation-mac .red {
     background-color: #f9614d;
+}
+
+.converter-container .navigation-mac .red:hover {
+    background-color: #ff7676;
 }
 
 .converter-container .navigation-mac .yellow {
@@ -39,11 +45,6 @@
 .converter-container .navigation-mac .green {
     background-color: #11c938;
 }
-
-.converter-container .form-container{
-
-}
-
 
 .converter-container form {
     position: relative;
@@ -60,18 +61,6 @@
 
 .converter-container form label {
     font-size: 1.3rem;
-}
-
-.converter-container form input {
-    position: relative;
-    outline: none;
-    background: none;
-    border: 1px solid #008cff;
-    border-radius: 6px;
-    width: 100%;
-    padding: 10px 17px;
-    font-size: 1.3rem;
-    color: #fff;
 }
 
 .converter-container form select {
@@ -116,11 +105,13 @@
     display: flex;
     width: 100%;
     justify-content: center;
+    word-break: break-all;
+    letter-spacing: 1.7px;
 }
 
 @media screen and (max-width: 450px) {
     .converter-container form .result {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 }
 
@@ -137,6 +128,7 @@
 
 .converter-container form .swap:hover {
     border: 1px solid #009cfb;
+    background-color: #009cfb;
 }
 
 .converter-container form .convert {
@@ -155,6 +147,137 @@
     background: #009cfb;
 }
 
-.converter-container form .length{
+.converter-container form .length {
     font-size: 1rem;
+}
+
+.converter-container .row .column .inputForm {
+    position: relative;
+    outline: none;
+    background: none;
+    border: 1px solid #008cff;
+    border-radius: 6px;
+    width: 100%;
+    height: 43px;
+    float: left;
+}
+
+.converter-container form input {
+    position: relative;
+    float: left;
+    height: 43px;
+    background: none;
+    padding: 0 10px;
+    border: none;
+    outline: none;
+    color: #fff;
+    width: calc(100% - 3.2em);
+    font-size: 1.25rem;
+}
+
+.fa-copy {
+    position: relative;
+    float: right;
+    width: 41px;
+    height: 41px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: ease-in-out 0.15s;
+    padding: 0 8px;
+    cursor: pointer;
+}
+
+.fa-copy:hover {
+    color: #008cff;
+}
+
+.copy-success {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    bottom: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility, opacity, ease-out 0.2s;
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
+    animation: cubic-bezier(0.165, 0.84, 0.44, 1) showBubble 0.3s;
+    background-color: #008cff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
+}
+
+@keyframes showBubble {
+    0% {
+        bottom: -100px;
+    }
+
+    100% {
+        bottom: 20px;
+    }
+}
+
+.copy-success h1 {
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip .tooltiptext {
+    position: absolute;
+    width: 83px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 7px;
+    padding: 5px;
+    z-index: 1;
+    bottom: 7px;
+    left: calc(100% + 15px);
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    visibility: hidden;
+    font-size: 0.55rem;
+}
+
+.tooltip .tooltiptext::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.writing-help {
+    font-size: 2rem;
+}
+
+.header-help {
+    font-weight: 400;
+}
+
+.eightBits {
+    font-weight: 400;
+    font-size: 2rem;
+    word-break: break-all;
 }
