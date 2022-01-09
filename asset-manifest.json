@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/BinaryDecimal-Convertor/static/css/main.d8c12bb7.css",
-    "main.js": "/BinaryDecimal-Convertor/static/js/main.34e8fe96.js",
+    "main.js": "/BinaryDecimal-Convertor/static/js/main.d6971482.js",
     "index.html": "/BinaryDecimal-Convertor/index.html",
     "main.d8c12bb7.css.map": "/BinaryDecimal-Convertor/static/css/main.d8c12bb7.css.map",
-    "main.34e8fe96.js.map": "/BinaryDecimal-Convertor/static/js/main.34e8fe96.js.map"
+    "main.d6971482.js.map": "/BinaryDecimal-Convertor/static/js/main.d6971482.js.map"
   },
   "entrypoints": [
     "static/css/main.d8c12bb7.css",
-    "static/js/main.34e8fe96.js"
+    "static/js/main.d6971482.js"
   ]
 }
